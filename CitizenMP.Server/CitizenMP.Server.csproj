@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\MEGA\Downloads\Programs\CitizenMP.Server.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F29FE2C3-7B77-4F98-81A4-C4D2EBBD6402}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>CitizenMP.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>CitizenMP.Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MsgPack" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EncryptHelper.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientFrame.cs" />
+    <Compile Include="OutReliableCommand.cs" />
+    <Compile Include="ClientInstances.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DownloadConfiguration.cs" />
+    <Compile Include="ImportConfiguration.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="LogExtensions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Time.cs" />
+    <Compile Include="TokenGenerator.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="DelegateSerializer`1.cs" />
+    <Compile Include="Resources\InternalCallRefHandler.cs" />
+    <Compile Include="Resources\ICallRefHandler.cs" />
+    <Compile Include="Resources\EventScriptFunctions.cs" />
+    <Compile Include="Resources\HttpScriptFunctions.cs" />
+    <Compile Include="Resources\LogScriptFunctions.cs" />
+    <Compile Include="Resources\PlayerScriptFunctions.cs" />
+    <Compile Include="Resources\RconScriptFunctions.cs" />
+    <Compile Include="Resources\Resource.cs" />
+    <Compile Include="Resources\ResourceState.cs" />
+    <Compile Include="Resources\ResourceExtensions.cs" />
+    <Compile Include="Resources\ResourceManager.cs" />
+    <Compile Include="Resources\ResourceScriptFunctions.cs" />
+    <Compile Include="Resources\ResourceUpdater.cs" />
+    <Compile Include="Resources\ScriptEnvironment.cs" />
+    <Compile Include="Resources\VMInitScriptFunctions.cs" />
+    <Compile Include="Resources\Tasks\BuildAssemblyTask.cs" />
+    <Compile Include="Resources\Tasks\ResourceTask.cs" />
+    <Compile Include="Resources\Tasks\ResourceTaskRunner.cs" />
+    <Compile Include="Resources\Tasks\UpdatePackageFileTask.cs" />
+    <Compile Include="Resources\Tasks\UpdateStreamListTask.cs" />
+    <Compile Include="Logging\BaseLog.cs" />
+    <Compile Include="Logging\WindowedLogger.cs" />
+    <Compile Include="HTTP\GetConfigurationMethod.cs" />
+    <Compile Include="HTTP\HttpServer.cs" />
+    <Compile Include="HTTP\InitConnectMethod.cs" />
+    <Compile Include="Game\GameServer.cs" />
+    <Compile Include="Game\NetChannel.cs" />
+    <Compile Include="Game\RconLog.cs" />
+    <Compile Include="Game\PartialStream.cs" />
+    <Compile Include="Game\RconPrint.cs" />
+    <Compile Include="Formats\MarkedBinaryWriter.cs" />
+    <Compile Include="Formats\RPFEntry.cs" />
+    <Compile Include="Formats\RPFFile.cs" />
+    <Compile Include="Commands\CommandManager.cs" />
+    <Compile Include="Commands\ConsoleCommandAttribute.cs" />
+    <Compile Include="Commands\ResourceCommands.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
