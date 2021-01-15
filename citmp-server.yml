@@ -1,0 +1,58 @@
+ListenPort: 30120
+
+PreParseResources:
+    - mapmanager
+
+AutoStartResources:
+    - gameInit # this resource (or equivalent) is pretty much required for the game to start; it'll crash on loading otherwise
+    - baseevents
+    - sessionmanager
+    - spawnmanager
+    - mapmanager
+    - chat
+    - betaguns
+    - obituary
+    - obituary-deaths
+    - freeroam
+
+RconPassword: lovely
+
+Hostname: CitizenMP:IV Reloaded Server
+
+Game: GTA4
+
+ScriptDebug: true
+
+#server slots limit (must be between 1 and 32)
+MaxPlayers: 32
+
+#server language
+Language: English
+
+#enable/disable clientside mods (like trainer)
+ScriptHookAllowed: true
+
+#enable/disable modified game files check
+CheckGameFiles: false
+
+#server password
+#Password: changeme
+
+#enable/disable server logs
+DebugLog: true
+
+#force stable/beta version
+#ForceVersion: beta
+
+#enable/disable client script encryption (beta only!)
+Encryption: false
+
+# enjoy viiv
+#Imports:
+#    - ConfigURL: http://cache.lilycove.hacks.re/exports.json
+
+# the following is an example for resource download offloading
+#Downloads:
+#    all:
+#        BaseURL: http://cache.lilycove.hacks.re/
+#        UploadURL: ftp://citizen:city@localhost/
