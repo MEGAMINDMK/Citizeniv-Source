@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\MEGA\Downloads\MsgPack.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93D358C3-7F93-460A-921B-CED48ED7436B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>MsgPack</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>0.6.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>MsgPack</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BigEndianBinary.cs" />
+    <Compile Include="Binary.cs" />
+    <Compile Include="BufferManager.cs" />
+    <Compile Include="CollectionDebuggerProxy`1.cs" />
+    <Compile Include="CollectionOperation.cs" />
+    <Compile Include="DictionaryDebuggerProxy`2.cs" />
+    <Compile Include="Float32Bits.cs" />
+    <Compile Include="Float64Bits.cs" />
+    <Compile Include="InvalidMessagePackStreamException.cs" />
+    <Compile Include="IPackable.cs" />
+    <Compile Include="Unpacker.cs" />
+    <Compile Include="ItemsUnpacker.cs" />
+    <Compile Include="IUnpackable.cs" />
+    <Compile Include="KnownExtTypeCode.cs" />
+    <Compile Include="KnownExtTypeName.cs" />
+    <Compile Include="MessagePackExtendedTypeObject.cs" />
+    <Compile Include="MessagePackObjectDictionary.cs" />
+    <Compile Include="MessagePackCode.cs" />
+    <Compile Include="MessagePackConvert.cs" />
+    <Compile Include="MessagePackObject.cs" />
+    <Compile Include="MessageNotSupportedException.cs" />
+    <Compile Include="MessagePackObjectEqualityComparer.cs" />
+    <Compile Include="MessagePackString.cs" />
+    <Compile Include="PackerCompatibilityOptions.cs" />
+    <Compile Include="PackerUnpackerExtensions.cs" />
+    <Compile Include="PackingOptions.cs" />
+    <Compile Include="MessageTypeException.cs" />
+    <Compile Include="Packer.cs" />
+    <Compile Include="ReflectionAbstractions.cs" />
+    <Compile Include="SetOperation.cs" />
+    <Compile Include="StreamPacker.cs" />
+    <Compile Include="StringEscape.cs" />
+    <Compile Include="SubtreeUnpacker.cs" />
+    <Compile Include="TupleItems.cs" />
+    <Compile Include="Unpacking.cs" />
+    <Compile Include="UnpackingStream.cs" />
+    <Compile Include="UnpackingStreamReader.cs" />
+    <Compile Include="UnpackingMode.cs" />
+    <Compile Include="UnsafeNativeMethods.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="UnpackingResult`1.cs" />
+    <Compile Include="UnpackException.cs" />
+    <Compile Include="UnassignedMessageTypeException.cs" />
+    <Compile Include="Serialization\NilImplicationHandler`4.cs" />
+    <Compile Include="Serialization\INilImplicationHandlerParameter.cs" />
+    <Compile Include="Serialization\INilImplicationHandlerOnUnpackedParameter`1.cs" />
+    <Compile Include="Serialization\CollectionDetailedKind.cs" />
+    <Compile Include="Serialization\IMessagePackSerializer.cs" />
+    <Compile Include="Serialization\IMessagePackSingleObjectSerializer.cs" />
+    <Compile Include="Serialization\MessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\MessagePackSerializer.cs" />
+    <Compile Include="Serialization\DateTimeConversionMethod.cs" />
+    <Compile Include="Serialization\DateTimeMemberConversionMethod.cs" />
+    <Compile Include="Serialization\DateTimeMessagePackSerializerHelpers.cs" />
+    <Compile Include="Serialization\DefaultSerializerNameResolver.cs" />
+    <Compile Include="Serialization\MessagePackSerializerProvider.cs" />
+    <Compile Include="Serialization\ICustomizableEnumSerializer.cs" />
+    <Compile Include="Serialization\EnumMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\MessagePackDateTimeMemberAttribute.cs" />
+    <Compile Include="Serialization\MessagePackRuntimeTypeAttribute.cs" />
+    <Compile Include="Serialization\MessagePackRuntimeCollectionItemTypeAttribute.cs" />
+    <Compile Include="Serialization\MessagePackRuntimeDictionaryKeyTypeAttribute.cs" />
+    <Compile Include="Serialization\MessagePackRuntimeTupleItemTypeAttribute.cs" />
+    <Compile Include="Serialization\MessagePackKnownTypeAttribute.cs" />
+    <Compile Include="Serialization\MessagePackKnownCollectionItemTypeAttribute.cs" />
+    <Compile Include="Serialization\MessagePackKnownDictionaryKeyTypeAttribute.cs" />
+    <Compile Include="Serialization\MessagePackKnownTupleItemTypeAttribute.cs" />
+    <Compile Include="Serialization\MessagePackDeserializationConstructorAttribute.cs" />
+    <Compile Include="Serialization\MessagePackIgnoreAttribute.cs" />
+    <Compile Include="Serialization\PolymorphismSchema.cs" />
+    <Compile Include="Serialization\PolymorphismSchemaChildrenType.cs" />
+    <Compile Include="Serialization\PolymorphismTarget.cs" />
+    <Compile Include="Serialization\PolymorphismType.cs" />
+    <Compile Include="Serialization\ResolveSerializerEventArgs.cs" />
+    <Compile Include="Serialization\SerializationContext.cs" />
+    <Compile Include="Serialization\SerializationTarget.cs" />
+    <Compile Include="Serialization\EnumMemberSerializationMethod.cs" />
+    <Compile Include="Serialization\EnumMessagePackSerializerHelpers.cs" />
+    <Compile Include="Serialization\EnumMessagePackSerializerProvider.cs" />
+    <Compile Include="Serialization\EnumSerializationMethod.cs" />
+    <Compile Include="Serialization\ISerializerGeneratorConfiguration.cs" />
+    <Compile Include="Serialization\MessagePackEnumAttribute.cs" />
+    <Compile Include="Serialization\MessagePackEnumMemberAttribute.cs" />
+    <Compile Include="Serialization\MessagePackSerializerExtensions.cs" />
+    <Compile Include="Serialization\SerializerAssemblyGenerationConfiguration.cs" />
+    <Compile Include="Serialization\SerializerCodeGenerationConfiguration.cs" />
+    <Compile Include="Serialization\DefaultConcreteTypeRepository.cs" />
+    <Compile Include="Serialization\EmitterFlavor.cs" />
+    <Compile Include="Serialization\SerializerCodeGenerationResult.cs" />
+    <Compile Include="Serialization\SerializerDebugging.cs" />
+    <Compile Include="Serialization\SerializerRegistrationOptions.cs" />
+    <Compile Include="Serialization\TypeKeyRepository.cs" />
+    <Compile Include="Serialization\SerializerTypeKeyRepository.cs" />
+    <Compile Include="Serialization\LazyDelegatingMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\MessagePackMemberAttribute.cs" />
+    <Compile Include="Serialization\IdentifierUtility.cs" />
+    <Compile Include="Serialization\CollectionTraits.cs" />
+    <Compile Include="Serialization\CollectionKind.cs" />
+    <Compile Include="Serialization\DataMemberContract.cs" />
+    <Compile Include="Serialization\FromExpression.cs" />
+    <Compile Include="Serialization\NilImplication.cs" />
+    <Compile Include="Serialization\SerializationCompatibilityOptions.cs" />
+    <Compile Include="Serialization\SerializationMethod.cs" />
+    <Compile Include="Serialization\SerializationMethodGeneratorOption.cs" />
+    <Compile Include="Serialization\SerializerGenerator.cs" />
+    <Compile Include="Serialization\SerializerRepository.cs" />
+    <Compile Include="Serialization\SerializingMember.cs" />
+    <Compile Include="Serialization\ReflectionExtensions.cs" />
+    <Compile Include="Serialization\SerializationExceptions.cs" />
+    <Compile Include="Serialization\Tracer.cs" />
+    <Compile Include="Serialization\ExtTypeCodeMapping.cs" />
+    <Compile Include="Serialization\UnpackHelpers.cs" />
+    <Compile Include="Serialization\AbstractSerializers\CollectionSerializerMethod.cs" />
+    <Compile Include="Serialization\AbstractSerializers\ICodeConstruct.cs" />
+    <Compile Include="Serialization\AbstractSerializers\ISerializerBuilder`1.cs" />
+    <Compile Include="Serialization\AbstractSerializers\ISerializerCodeGenerationContext.cs" />
+    <Compile Include="Serialization\AbstractSerializers\ISerializerCodeGenerator.cs" />
+    <Compile Include="Serialization\AbstractSerializers\SerializerBuilder`3.cs" />
+    <Compile Include="Serialization\AbstractSerializers\SerializerSpecification.cs" />
+    <Compile Include="Serialization\AbstractSerializers\SerializerFieldKey.cs" />
+    <Compile Include="Serialization\AbstractSerializers\SerializerMethod.cs" />
+    <Compile Include="Serialization\AbstractSerializers\SerializerGenerationContext`1.cs" />
+    <Compile Include="Serialization\AbstractSerializers\EnumSerializerMethod.cs" />
+    <Compile Include="Serialization\AbstractSerializers\SerializerBuilderContract`3.cs" />
+    <Compile Include="Serialization\CodeDomSerializers\CodeDomSerializerBuilder.cs" />
+    <Compile Include="Serialization\CodeDomSerializers\CodeDomSerializerBuilder`1.cs" />
+    <Compile Include="Serialization\CodeDomSerializers\CodeDomConstruct.cs" />
+    <Compile Include="Serialization\CodeDomSerializers\CodeDomContext.cs" />
+    <Compile Include="Serialization\CodeDomSerializers\ExpressionCodeDomConstruct.cs" />
+    <Compile Include="Serialization\CodeDomSerializers\ParameterCodeDomConstruct.cs" />
+    <Compile Include="Serialization\CodeDomSerializers\StatementCodeDomConstruct.cs" />
+    <Compile Include="Serialization\CodeDomSerializers\VariableCodeDomConstruct.cs" />
+    <Compile Include="Serialization\CollectionSerializers\ICollectionInstanceFactory.cs" />
+    <Compile Include="Serialization\CollectionSerializers\EnumerableMessagePackSerializerBase`2.cs" />
+    <Compile Include="Serialization\CollectionSerializers\CollectionMessagePackSerializerBase`2.cs" />
+    <Compile Include="Serialization\CollectionSerializers\CollectionSerializerHelpers.cs" />
+    <Compile Include="Serialization\CollectionSerializers\DictionaryMessagePackSerializerBase`3.cs" />
+    <Compile Include="Serialization\CollectionSerializers\NonGenericDictionaryMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\CollectionSerializers\NonGenericEnumerableMessagePackSerializerBase`1.cs" />
+    <Compile Include="Serialization\CollectionSerializers\NonGenericEnumerableMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\CollectionSerializers\NonGenericCollectionMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\CollectionSerializers\NonGenericListMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\CollectionSerializers\CollectionMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\CollectionSerializers\DictionaryMessagePackSerializer`3.cs" />
+    <Compile Include="Serialization\CollectionSerializers\EnumerableMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\CollectionSerializers\ReadOnlyCollectionMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\CollectionSerializers\ReadOnlyDictionaryMessagePackSerializer`3.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractCollectionSerializerHelper.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractNonGenericDictionaryMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractEnumerableMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractNonGenericEnumerableMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractNonGenericCollectionMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractNonGenericListMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractCollectionMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractDictionaryMessagePackSerializer`3.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractReadOnlyCollectionMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\DefaultSerializers\AbstractReadOnlyDictionaryMessagePackSerializer`3.cs" />
+    <Compile Include="Serialization\DefaultSerializers\DateTimeMessagePackSerializerProvider.cs" />
+    <Compile Include="Serialization\DefaultSerializers\DateTimeOffsetMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\DateTimeOffsetMessagePackSerializerProvider.cs" />
+    <Compile Include="Serialization\DefaultSerializers\FileTimeMessagePackSerializerProvider.cs" />
+    <Compile Include="Serialization\DefaultSerializers\InternalDateTimeExtensions.cs" />
+    <Compile Include="Serialization\DefaultSerializers\MultidimensionalArraySerializer`2.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NativeDateTimeMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NativeFileTimeMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_DBNullMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Globalization_CultureInfoMessagePackSeriali.cs" />
+    <Compile Include="Serialization\DefaultSerializers\UnixEpocDateTimeMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\UnixEpocFileTimeMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\ArraySerializer`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\GenericSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\ImmutableCollectionSerializer`2.cs" />
+    <Compile Include="Serialization\DefaultSerializers\ImmutableDictionarySerializer`3.cs" />
+    <Compile Include="Serialization\DefaultSerializers\ImmutableStackSerializer`2.cs" />
+    <Compile Include="Serialization\DefaultSerializers\SByteArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\Int16ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\Int32ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\Int64ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\ByteArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\UInt16ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\UInt32ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\UInt64ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\SingleArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\DoubleArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\BooleanArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableSByteArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableInt16ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableInt32ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableInt64ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableByteArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableUInt16ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableUInt32ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableUInt64ArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableSingleArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableDoubleArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableBooleanArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\StringArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\BinaryArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\MessagePackObjectArraySerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\MsgPack_MessagePackObjectDictionaryMessagePackSeri.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_Generic_List_1MessagePackSerial`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_Generic_Queue_1MessagePackSeria`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_Generic_Stack_1MessagePackSeria`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_QueueMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_StackMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_Generic_ListOfMessagePackObject.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_Generic_Dictionary_2MessagePack`2.cs" />
+    <Compile Include="Serialization\DefaultSerializers\MessagePackObjectExtensions.cs" />
+    <Compile Include="Serialization\DefaultSerializers\MsgPack_MessagePackExtendedTypeObjectMessagePackSe.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_BooleanMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_ByteMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_CharMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_DecimalMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_DoubleMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_GuidMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Int16MessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Int32MessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Int64MessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_SByteMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_SingleMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_TimeSpanMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_UInt16MessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_UInt32MessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_UInt64MessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_Specialized_BitVector32MessageP.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Numerics_BigIntegerMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\MsgPack_MessagePackObjectMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\NullableMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_ObjectMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_StringMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Text_StringBuilderMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_ByteArrayMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_CharArrayMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\ArraySegmentMessageSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_ArraySegment_1MessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_DictionaryEntryMessagePackSeria.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_Generic_KeyValuePair_2MessagePa`2.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Numerics_ComplexMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_UriMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_VersionMessagePackSerializer.cs" />
+    <Compile Include="Serialization\DefaultSerializers\System_Collections_Specialized_NameValueCollection.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackCollectionMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackDictionaryMessagePackSerializer`3.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackEnumerableMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackEnumMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackNonGenericCollectionMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackNonGenericDictionaryMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackNonGenericEnumerableMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackNonGenericListMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackReadOnlyCollectionMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\EmittingSerializers\CallbackReadOnlyDictionaryMessagePackSerializer`3.cs" />
+    <Compile Include="Serialization\EmittingSerializers\EnumSerializerEmitter.cs" />
+    <Compile Include="Serialization\EmittingSerializers\ContextBasedEnumSerializerEmitter.cs" />
+    <Compile Include="Serialization\EmittingSerializers\EnumSerializerEmitterContract.cs" />
+    <Compile Include="Serialization\EmittingSerializers\FieldBasedEnumSerializerEmitter.cs" />
+    <Compile Include="Serialization\EmittingSerializers\ILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\AndConditionILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\AssemblyBuilderCodeGenerationContext.cs" />
+    <Compile Include="Serialization\EmittingSerializers\ILEmittingContext.cs" />
+    <Compile Include="Serialization\EmittingSerializers\AssemblyBuilderEmittingContext.cs" />
+    <Compile Include="Serialization\EmittingSerializers\ContextfulILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\BinaryOperatorILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\ConditionalILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\DynamicMethodEmittingContext.cs" />
+    <Compile Include="Serialization\EmittingSerializers\ILEmittingSerializerBuilder`2.cs" />
+    <Compile Include="Serialization\EmittingSerializers\DynamicMethodSerializerBuilder`1.cs" />
+    <Compile Include="Serialization\EmittingSerializers\AssemblyBuilderSerializerBuilder`1.cs" />
+    <Compile Include="Serialization\EmittingSerializers\InvocationILConsruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\LoadFieldILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\SerializerEmitter.cs" />
+    <Compile Include="Serialization\EmittingSerializers\ContextBasedSerializerEmitter.cs" />
+    <Compile Include="Serialization\EmittingSerializers\SequenceILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\SinglelStepILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\StatementExpressionILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\StoreFieldILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\StoreVariableILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\UnaryOperatorILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\VariableILConstruct.cs" />
+    <Compile Include="Serialization\EmittingSerializers\FieldBasedSerializerEmitter.cs" />
+    <Compile Include="Serialization\EmittingSerializers\SerializationMethodGeneratorManager.cs" />
+    <Compile Include="Serialization\EmittingSerializers\DefaultSerializationMethodGeneratorManager.cs" />
+    <Compile Include="Serialization\EmittingSerializers\SerializerEmitterContract.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackCollectionMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackDictionaryMessagePackSerializer`3.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackEnumerableMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackNonGenericCollectionMessagePackS`1.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackNonGenericDictionaryMessagePackS`1.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackNonGenericEnumerableMessagePackS`1.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackNonGenericListMessagePackSeriali`1.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackReadOnlyCollectionMessagePackSer`2.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackReadOnlyDictionaryMessagePackSer`3.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionTreeSerializerBuilderHelpers.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackEnumMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionCallbackMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionConstruct.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionDumper.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionTreeContext.cs" />
+    <Compile Include="Serialization\ExpressionSerializers\ExpressionTreeSerializerBuilder`1.cs" />
+    <Compile Include="Serialization\Polymorphic\IPolymorphicHelperAttribute.cs" />
+    <Compile Include="Serialization\Polymorphic\IPolymorphicRuntimeTypeAttribute.cs" />
+    <Compile Include="Serialization\Polymorphic\IPolymorphicTupleItemTypeAttribute.cs" />
+    <Compile Include="Serialization\Polymorphic\IPolymorphicKnownTypeAttribute.cs" />
+    <Compile Include="Serialization\Polymorphic\IPolymorphicDeserializer.cs" />
+    <Compile Include="Serialization\Polymorphic\KnownTypePolymorphicMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\Polymorphic\PolymorphicSerializerProvider`1.cs" />
+    <Compile Include="Serialization\Polymorphic\TypeInfoEncoding.cs" />
+    <Compile Include="Serialization\Polymorphic\TypeEmbedingPolymorphicMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\Polymorphic\TypeInfoEncoder.cs" />
+    <Compile Include="Serialization\Metadata\_DateTimeMessagePackSerializerHelpers.cs" />
+    <Compile Include="Serialization\Metadata\_Decimal.cs" />
+    <Compile Include="Serialization\Metadata\_EnumMessagePackSerializerHelpers.cs" />
+    <Compile Include="Serialization\Metadata\_FieldInfo.cs" />
+    <Compile Include="Serialization\Metadata\_MethodBase.cs" />
+    <Compile Include="Serialization\Metadata\_CultureInfo.cs" />
+    <Compile Include="Serialization\Metadata\_IDictionaryEnumerator.cs" />
+    <Compile Include="Serialization\Metadata\_IEnumerator.cs" />
+    <Compile Include="Serialization\Metadata\_MessagePackSerializer.cs" />
+    <Compile Include="Serialization\Metadata\_SerializationContext.cs" />
+    <Compile Include="Serialization\Metadata\_String.cs" />
+    <Compile Include="Serialization\Metadata\_MessagePackObject.cs" />
+    <Compile Include="Serialization\Metadata\_IDisposable.cs" />
+    <Compile Include="Serialization\Metadata\_DictionaryEntry.cs" />
+    <Compile Include="Serialization\Metadata\_Type.cs" />
+    <Compile Include="Serialization\Metadata\_Unpacker.cs" />
+    <Compile Include="Serialization\Metadata\_Packer.cs" />
+    <Compile Include="Serialization\Metadata\_UnpackHelpers.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionEnumerableMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionCollectionMessagePackSerializer`2.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionDictionaryMessagePackSerializer`3.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionNilImplicationHandler.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionEnumMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionNonGenericCollectionMessagePackSerialize`1.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionNonGenericEnumerableMessagePackSerialize`1.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionNonGenericDictionaryMessagePackSerialize`1.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionNonGenericListMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionSerializerHelper.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionSerializerNilImplicationHandlerOnUnpacke.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionSerializerNilImplicationHandlerParameter.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionTupleMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\ReflectionSerializers\ReflectionObjectMessagePackSerializer`1.cs" />
+    <Compile Include="Serialization\Reflection\GenericTypeExtensions.cs" />
+    <Compile Include="Serialization\Reflection\ReflectionExtensions.cs" />
+    <Compile Include="Serialization\Reflection\TracingILGenerator.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
